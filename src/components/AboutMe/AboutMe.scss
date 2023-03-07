@@ -1,0 +1,30 @@
+#about-me {
+    width: 100%;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 140px 0;
+
+    img {
+        flex: 1 1 100px;
+        max-width: 460px;
+    }
+
+    .column {
+        flex: 1 1 500px;
+        max-width: 927px;
+
+        .title {
+            font-size: 3rem;
+            margin: 24px 0;
+            font-weight: 800;
+            line-height: 56px;
+        }
+
+        .description {
+            font-size: 1.125rem;
+            line-height: 25px;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+#skill-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 200px;
+    height: 200px;
+    border: 1px solid rgba(123, 74, 226, 0.5);
+    border-radius: 16px;
+
+    img {
+        margin-bottom: 12px;
+    }
+
+    .small-text {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 19px;
+        color: #FFFFFF;
+    }
+
+    .text {
+        font-size: 2rem;
+        line-height: 38px;
+    }
+}

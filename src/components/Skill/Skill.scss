@@ -1,0 +1,48 @@
+#skill {
+    width: 100%;
+    border-bottom: 1px solid rgba(123, 74, 226, 0.2);
+
+    .skill-container {
+        display: flex;
+        gap: 24px;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 900px;
+        min-height: 542px;
+    }
+
+    .skill-deck {
+        width: 100%;
+        display: flex;
+        gap: 24px 80px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .purple-box {
+        display: flex;
+        padding: 22px;
+        height: 110px;
+        justify-content: space-between;
+        gap: 24px;
+        background: rgba(123, 74, 226, 0.1);
+        border-radius: 16px;
+    }
+
+    .box-info {
+        width: 206px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media screen and (max-width: 990px) {
+        .skill-deck {
+            gap: 24px 32px;
+        }
+    }
+}
