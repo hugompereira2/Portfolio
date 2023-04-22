@@ -1,0 +1,29 @@
+#work {
+    width: 100%;
+
+    .title {
+        margin-top: 1.5rem;
+        font-size: 3rem;
+        line-height: 56px;
+    }
+
+    .project-deck {
+        padding: 6.25rem 0;
+        display: grid;
+        gap: 1.875rem;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        justify-content: center;
+        justify-items: center;
+    }
+
+    @media screen and (max-width: 768px) {
+        .title {
+            text-align: center;
+            font-size: 2.6rem
+        }
+
+        .project-deck {
+            padding: 2rem 0;
+        }
+    }
+}

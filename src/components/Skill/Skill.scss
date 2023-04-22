@@ -25,16 +25,17 @@
     .purple-box {
         display: flex;
         padding: 22px;
-        height: 110px;
-        justify-content: space-between;
+        min-height: 110px;
+        flex-wrap: wrap;
+        justify-content: space-around;
         gap: 24px;
         background: rgba(123, 74, 226, 0.1);
         border-radius: 16px;
     }
 
     .box-info {
-        width: 206px;
         display: flex;
+        width: 200px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -43,6 +44,14 @@
     @media screen and (max-width: 990px) {
         .skill-deck {
             gap: 24px 32px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        border-bottom: none;
+
+        .purple-box {
+            display: none;
         }
     }
 }

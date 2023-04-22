@@ -3,6 +3,10 @@
     min-height: calc(100vh - 64px);
     border-bottom: 1px solid rgba(123, 74, 226, 0.2);
 
+    @media screen and (max-width: 768px) {
+        border-bottom: none;
+    }
+
     .user {
         width: 100%;
         display: flex;
@@ -65,6 +69,42 @@
 
             100% {
                 transform: scale(0.95);
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .user {
+            flex-direction: column;
+            align-items: flex-start;
+
+            .user-avatar {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                order: -1;
+                padding: 0 0 1rem;
+
+                img {
+                    max-height: 275px;
+                    
+                }
+            }
+
+            .user-info {
+                max-width: none;
+
+                #social-media {
+                    display: none;
+                }
+            }
+
+            .user-contact {
+                width: 100%;
+                flex-direction: row;
+                justify-content: center;
+                gap: 15px;
+                margin: 1rem 0;
             }
         }
     }

@@ -3,8 +3,12 @@ import CodeIcon from '../../assets/code_icon.svg'
 import BackIcon from '../../assets/back_icon.svg'
 import WorkIcon from '../../assets/work_icon.svg'
 import "./Skill.scss"
+import { forwardRef } from "react"
 
-const Skill = () => {
+interface ISkill { }
+
+
+const Skill = forwardRef<HTMLDivElement, ISkill>((props, ref) => {
 
     const skills = [
         { icon: CodeIcon, smallText: "5 anos como", text: "Front-End", light: false },
@@ -13,12 +17,13 @@ const Skill = () => {
     ]
 
     return (
-        <div id="skill">
+        <div id="skill" ref={ref}>
             <div className="skill-container">
                 <div className="skill-deck">
                     {skills.map((skill) => {
                         return (
                             <SkillCard
+                                key={skill.text}
                                 icon={skill.icon}
                                 smallText={skill.smallText}
                                 text={skill.text}
@@ -43,6 +48,6 @@ const Skill = () => {
             </div>
         </div>
     )
-}
+})
 
 export default Skill

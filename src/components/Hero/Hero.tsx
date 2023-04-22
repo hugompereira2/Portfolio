@@ -3,11 +3,14 @@ import Avatar from '../../assets/avatar.svg'
 import ArrowIcon from '../../assets/arrow_icon.svg'
 import TopSection from "../TopSection/TopSection"
 import SocialMedia from "../SocialMedia/SocialMedia"
+import { forwardRef } from "react"
 
-const Home = () => {
+interface IHero { }
+
+const Hero = forwardRef<HTMLDivElement, IHero>((props, ref) => {
 
     return (
-        <div id="hero">
+        <div id="hero" ref={ref}>
             <div className="user">
                 <div className="user-info">
                     <TopSection text={"👋 Saudações!"} width={160} />
@@ -25,6 +28,6 @@ const Home = () => {
             </div>
         </div>
     )
-}
+})
 
-export default Home
+export default Hero

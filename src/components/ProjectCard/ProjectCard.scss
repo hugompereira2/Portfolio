@@ -1,0 +1,41 @@
+#project-card {
+    padding: 1.687rem 1.875rem;
+    border: 1px solid rgba(123, 74, 226, 0.5);
+    border-radius: 16px;
+    transition: 0.2s;
+
+    .project-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 1.4375rem;
+    }
+
+    .project-type {
+        display: flex;
+        gap: 8px;
+    }
+
+    .project-text {
+        margin: 8px 0 16px;
+        min-height: 100px;
+        font-size: 0.875rem;
+        line-height: 1rem;
+        color: #FFFFFF80;
+    }
+
+    .badge-purple {
+        color: #7B4AE2;
+        height: 36px;
+        padding: 0 8px;
+        background: rgba(123, 74, 226, 0.1);
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background: rgba(123, 74, 226, 0.1);
+    }
+}

@@ -1,50 +1,48 @@
 import logo from '../../assets/logo.svg';
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import NavbarContext from "../../context/NavbarContext";
 import "./Navbar.scss";
-import { useEffect, useState } from "react";
+import SocialMedia from "../SocialMedia/SocialMedia";
 
 const Navbar = () => {
-    const navigate = useNavigate();
-    const location = useLocation();
-    const [user, setUser] = useState(false);
-    const [showModal, setShowModal] = useState(false);
-    const [error, setError] = useState<string>("");
+    const { setNavbarContext } = useContext(NavbarContext);
 
+    const navigate = useNavigate();
     const GoHome = () => {
         navigate("/");
     }
 
-    const GoDashboard = () => {
-        navigate("/dashboard");
-    }
-
-    const goProfile = () => {
-        navigate("/profile");
-    }
-
-    const handleLogout = () => {
-        localStorage.removeItem("user");
-        navigate("/");
-        setUser(false);
-    }
-
-    useEffect(() => {
-        const userStringfy = localStorage.getItem("user");
-
-        if (userStringfy) {
-            setUser(JSON.parse(userStringfy));
+    const translateNavbar = (value: string) => {
+        switch (value) {
+            case "Sobre mim":
+                return "About Me"
+            case "Skills":
+                return "Skill"
+            case "Portfólio":
+                return "Work"
+            default:
+                return value;
         }
-    }, [showModal])
+    }
+
+    const handleClickNav = (value: string) => {
+        const translatedWord = translateNavbar(value);
+        setNavbarContext(translatedWord);
+    }
 
     return (
         <div id="navbar">
             <div className="navbar-options">
                 <img src={logo} className="logo" alt="logo" onClick={GoHome} />
-                <a href="#">Home</a>
-                <a href="#">Sobre mim</a>
-                <a href="#">Skills</a>
-                <a href="#">Carreira</a>
-                <a href="#">Contato</a>
+                <a href="#home" onClick={(e) => handleClickNav(e.currentTarget.textContent!)}>Home</a>
+                <a href="#about" onClick={(e) => handleClickNav(e.currentTarget.textContent!)}>Sobre mim</a>
+                <a href="#skills" onClick={(e) => handleClickNav(e.currentTarget.textContent!)}>Skills</a>
+                <a href="#carreira" onClick={(e) => handleClickNav(e.currentTarget.textContent!)}>Carreira</a>
+                <a href="#contato" onClick={(e) => handleClickNav(e.currentTarget.textContent!)}>Contato</a>
+            </div>
+            <div className="navbar-options-mobile">
+                <SocialMedia />
             </div>
         </div>
     )

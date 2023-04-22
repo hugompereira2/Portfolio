@@ -6,7 +6,12 @@
     justify-content: space-between;
     padding: 140px 0;
 
+    @media screen and (max-width: 768px) {
+        padding: 2rem 0;
+    }
+
     img {
+        margin: 0 auto;
         flex: 1 1 100px;
         max-width: 460px;
     }
@@ -25,6 +30,16 @@
         .description {
             font-size: 1.125rem;
             line-height: 25px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .title {
+            font-size: 2.6rem
+        }
+
+        img {
+            max-width: 250px;
         }
     }
 }
