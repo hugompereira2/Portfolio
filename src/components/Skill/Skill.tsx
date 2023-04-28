@@ -12,8 +12,8 @@ const Skill = forwardRef<HTMLDivElement, ISkill>((props, ref) => {
 
     const skills = [
         { icon: CodeIcon, smallText: "5 anos como", text: "Front-End", light: false },
-        { icon: WorkIcon, smallText: "6 anos de", text: "Trabalhos", light: true },
-        { icon: BackIcon, smallText: "5 anos como", text: "Back-End", light: false }
+        { icon: WorkIcon, smallText: "5 anos de", text: "Trabalhos", light: true },
+        { icon: BackIcon, smallText: "3 anos como", text: "Back-End", light: false }
     ]
 
     return (

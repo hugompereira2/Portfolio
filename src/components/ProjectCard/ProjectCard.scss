@@ -11,6 +11,7 @@
     }
 
     .project-type {
+        margin-bottom: 22px;
         display: flex;
         gap: 8px;
     }
@@ -32,6 +33,16 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .green {
+        color: #4AE290 !important;
+        background: #1c4e3a !important;
+    }
+
+    img {
+        border-radius: 8px;
+        max-width: 100%;
     }
 
     &:hover {

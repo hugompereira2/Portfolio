@@ -44,7 +44,7 @@ const Technology = forwardRef<HTMLDivElement, ITechnology>((props, ref) => {
 
     return (
         <div id="technology" ref={ref}>
-            <TopSection text={"🧑‍💻 Skills · Experiências"} width={280} />
+            <TopSection text={"🧑‍💻 Skills · Techs"} width={280} />
             <h2 className="title">Tecnologias e habilidades</h2>
             <span className="subtitle">Techs que uso no dia a dia</span>
             <div className="technology-deck">

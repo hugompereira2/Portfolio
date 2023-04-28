@@ -1,6 +1,7 @@
 import "./Hero.scss"
 import Avatar from '../../assets/avatar.svg'
 import ArrowIcon from '../../assets/arrow_icon.svg'
+import Whatsapp from '../../assets/whatsapp.svg'
 import TopSection from "../TopSection/TopSection"
 import SocialMedia from "../SocialMedia/SocialMedia"
 import { forwardRef } from "react"
@@ -22,8 +23,13 @@ const Hero = forwardRef<HTMLDivElement, IHero>((props, ref) => {
                     <img src={Avatar} alt="Avatar" />
                 </div>
                 <div className="user-contact">
-                    <span className="text-cv">Baixar CV <img src={ArrowIcon} alt="ArrowIcon" /></span>
-                    <button>Vamos Conversar</button>
+                    <a href="/curriculo.pdf" download className="text-cv">Baixar CV <img src={ArrowIcon} alt="ArrowIcon" /></a>
+                    <a
+                        href="https://api.whatsapp.com/send?phone=5514996629222"
+                        className="whatsapp-button" target="_blank">
+                        <img src={Whatsapp} alt="whatsapp" />
+                        Vamos Conversar
+                    </a>
                 </div>
             </div>
         </div>

@@ -1,21 +1,35 @@
 import "./ProjectCard.scss"
 import TopSection from "../TopSection/TopSection"
 
-const ProjectCard = () => {
+interface IProjectCard {
+    name: string;
+    desc: string;
+    live: string;
+    github: string;
+    img: string;
+    tags: Array<string>;
+}
+
+const ProjectCard = (props: IProjectCard) => {
+
+    const handleClickCard = () => {
+        window.open(`${props.live || props.github}`, "_blank")
+    }
 
     return (
-        <div id="project-card">
-            <h2 className="project-title">Move.it</h2>
+        <div id="project-card" onClick={() => handleClickCard()}>
+            <h2 className="project-title">{props.name}</h2>
             <p className="project-text">
-                Aplicação da NLW#04 da Rocketseat.
-                Desenvolvida com React. Plataforma
-                de Pomodoro com exercícios.
+                {props.desc}
             </p>
             <div className="project-type">
-                <span className="badge-purple">React JS</span>
-                <span className="badge-purple">Typescript</span>
+                {props.tags?.map((tag) => {
+                    return (
+                        <span key={tag} className={`${tag == "Online" ? "badge-purple green" : "badge-purple"}`}>{tag}</span>
+                    )
+                })}
             </div>
-
+            <img src={props.img} alt="project-img" />
         </div>
     )
 }

@@ -37,9 +37,8 @@ const Navbar = () => {
                 <img src={logo} className="logo" alt="logo" onClick={GoHome} />
                 <a href="#home" onClick={(e) => handleClickNav(e.currentTarget.textContent!)}>Home</a>
                 <a href="#about" onClick={(e) => handleClickNav(e.currentTarget.textContent!)}>Sobre mim</a>
+                <a href="#portfolio" onClick={(e) => handleClickNav(e.currentTarget.textContent!)}>Portfólio</a>
                 <a href="#skills" onClick={(e) => handleClickNav(e.currentTarget.textContent!)}>Skills</a>
-                <a href="#carreira" onClick={(e) => handleClickNav(e.currentTarget.textContent!)}>Carreira</a>
-                <a href="#contato" onClick={(e) => handleClickNav(e.currentTarget.textContent!)}>Contato</a>
             </div>
             <div className="navbar-options-mobile">
                 <SocialMedia />

@@ -15,9 +15,9 @@ const AboutMe = forwardRef<HTMLDivElement, IAboutMe>((props, ref) => {
                 <h1 className="title">Hugo Mendonça</h1>
                 <p className="description">👋 Me chamo Hugo Mendonça Pereira. Muito Prazer!
                     <br /><br />
-                    👨‍💻 Há mais de 2 anos desenvolvendo e programando interfaces com JavaScript, React JS e Typescript. <br />
+                    👨‍💻 Há mais de 5 anos desenvolvendo e programando interfaces com JavaScript, React JS e Typescript. <br />
                     🎓 Graduado em Análise e Desenvolvimento de Sistemas pela Fatec de Lins-SP. <br />
-                    💡 Interesses em desenvolvimento Front-end com React, React Native, VueJS e UX/UI Design.
+                    💡 Interesses em desenvolvimento Front-end com React, VueJS e UX/UI Design.
                     <br /><br />
                     🚀 Tentando ser um pouquinho melhor do que ontem todos dias.</p>
             </div>
