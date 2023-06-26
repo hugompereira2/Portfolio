@@ -3,6 +3,7 @@ import TopSection from "../TopSection/TopSection"
 import ProjectCard from "../ProjectCard/ProjectCard"
 import FinanceImg from "../../assets/project/finance.png"
 import HabitsImg from "../../assets/project/habits.png"
+import WhatsImg from "../../assets/project/whatsapp.png"
 import { forwardRef } from "react"
 
 interface IWork { }
@@ -10,6 +11,14 @@ interface IWork { }
 const Work = forwardRef<HTMLDivElement, IWork>((props, ref) => {
 
     const projects = [
+        {
+            name: "WhatsApp Clone (On Going)",
+            desc: "I am currently working on a project to develop a WhatsApp clone with a focus on building the user interface using React. The goal of the project is to recreate the familiar and intuitive messaging experience of the original WhatsApp application.",
+            img: WhatsImg,
+            live: "https://hugo-whatsapp-clone.netlify.app/",
+            github: "",
+            tags: ["Online", "React", "Vite"]
+        },
         {
             name: "Finance",
             desc: "The project uses the currency quotes API provided by hgbrasil. With this API, we can obtain up-to-date information on the values of major currencies relative to other currencies and easily convert them.",
