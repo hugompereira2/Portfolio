@@ -4,6 +4,7 @@ import ProjectCard from "../ProjectCard/ProjectCard"
 import FinanceImg from "../../assets/project/finance.png"
 import HabitsImg from "../../assets/project/habits.png"
 import WhatsImg from "../../assets/project/whatsapp.png"
+import MarvelImg from "../../assets/project/marvel.png"
 import { forwardRef } from "react"
 
 interface IWork { }
@@ -18,6 +19,14 @@ const Work = forwardRef<HTMLDivElement, IWork>((props, ref) => {
             live: "https://hugo-whatsapp-clone.netlify.app/",
             github: "",
             tags: ["Online", "React", "Vite"]
+        },
+        {
+            name: "Marvel",
+            desc: "The project utilizes the Marvel API to obtain information about comic books. With this API, it is possible to list and display details of the available comic books, such as title, description, cover image, and other relevant attributes.",
+            img: MarvelImg,
+            live: "https://marvel-hugompereira2.vercel.app/",
+            github: "",
+            tags: ["Online", "React", "Next"]
         },
         {
             name: "Finance",
